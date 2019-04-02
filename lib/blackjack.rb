@@ -15,15 +15,17 @@ def prompt_user
 end
 
 def get_user_input
-  # code #get_user_input here
+ gets.chomp.strip
 end
 
 def end_game
-  # code #end_game here
+  puts "Sorry, you hit #{card_total}. Thank you for playing!"
 end
 
 def initial_round
-  # code #initial_round here
+  first_round =  deal_card+ deal_card
+  display_card_total(first_round)
+  return first_round
 end
 
 def hit?
